@@ -10,10 +10,15 @@ window.CLUB_CONTENT = {
     work3: { src: '', alt: '', caption: '' }
   },
   info: { activities: '', schedule: '', visit: '' },
-  contactEmail: '',
+  contactEmail: 's2412438@u.tsukuba.ac.jp',
   crowdfundingUrl: '',
   shopUrl: '',
-  socials: { instagram: '', x: '' },
+  socials: {
+    tiktok: 'https://www.tiktok.com/@tsukuba_shodobu',
+    youtube: 'https://youtube.com/channel/UC-U7koPe01kTyQrPx79_YJA',
+    instagram: 'https://instagram.com/syodou.taukuba/',
+    x: ''
+  },
   // 活動記録は確認済みの内容だけ掲載。設定方法はREADMEを参照。
   updates: [],
   // 作品数は任意。空欄の場合は上のwork1〜work3を使用。
@@ -64,24 +69,6 @@ window.CLUB_CONTENT = {
       src: 'assets/photos/sakuhin/LINE_ALBUM_ウェブサイト_261009_8.jpg',
       title: '作品写真 08',
       alt: 'かな文字を書いた複数の紙を、縦に並べて展示した作品',
-      orientation: 'tall'
-    },
-    {
-      src: 'assets/photos/sakuhin/LINE_ALBUM_ウェブサイト_261009_9.jpg',
-      title: '作品写真 09',
-      alt: '展示会場の壁に掛けられた、細長い額装の漢字作品',
-      orientation: 'tall'
-    },
-    {
-      src: 'assets/photos/sakuhin/LINE_ALBUM_ウェブサイト_261009_10.jpg',
-      title: '作品写真 10',
-      alt: '展示会場に掛けられた、木枠の額に入った漢字作品',
-      orientation: 'wide'
-    },
-    {
-      src: 'assets/photos/sakuhin/LINE_ALBUM_ウェブサイト_261009_11.jpg',
-      title: '作品写真 11',
-      alt: '白い紙に、漢字を整った縦の列で書いた作品',
       orientation: 'tall'
     },
     {

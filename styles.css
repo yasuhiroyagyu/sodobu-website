@@ -242,8 +242,18 @@ body.dialog-open { overflow: hidden; }
 .copy-email { background: white; border: 1px solid var(--line); padding: 9px 14px; min-height: 44px; font-size: 11px; }
 .copy-email:hover { border-color: var(--purple); }
 .copy-status { font-size: 11px; color: var(--muted); }
-.social-links { display: flex; gap: 20px; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 24px; }
-.social-links a { color: var(--purple); text-decoration: underline; font-size: 12px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 24px; }
+.social-links a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 10px; color: var(--purple); border: 1px solid var(--line); border-radius: 50%; text-decoration: none; font-size: 12px; transition: background .18s, border-color .18s; }
+.social-links a img { width: 24px; height: 24px; }
+.social-links a:hover { border-color: var(--purple); background: var(--paper); }
+.social-heading { font-size: 12px; font-weight: 700; margin-top: 24px; }
+.social-heading + .social-links { margin-top: 10px; }
+.footer-socials { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 30px; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ffffff30; }
+.footer-socials > p { font-size: 10px; color: #d9c8e3; }
+.footer-socials .social-links { border: 0; padding: 0; margin: 0; }
+.footer-socials .social-links a { color: white; border-color: #ffffff45; }
+.footer-socials .social-links a img { filter: invert(1); }
+.footer-socials .social-links a:hover { border-color: var(--blue); background: #ffffff15; text-decoration: none; }
 .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 60px; }
 .faq-list { border-top: 1px solid var(--line); }
 .faq-list details { border-bottom: 1px solid var(--line); }

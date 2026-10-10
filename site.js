@@ -57,7 +57,7 @@
     });
   }
 
-  for (const [key, label] of [['crowdfunding', 'クラファンで応援する'], ['shop', '販売先を見る']]) {
+  for (const [key, label] of [['crowdfunding', 'クラファンで応援する'], ['shop', 'オーダーのご案内を見る']]) {
     const url = webUrl(key === 'shop' ? content.shopUrl : content.crowdfundingUrl);
     if (!url) continue;
     document.querySelectorAll(`[data-action="${key}"]`).forEach(node => {
@@ -112,18 +112,30 @@
     });
   }
 
-  const socialLinks = [['instagram', 'Instagram'], ['x', 'X']]
-    .map(([key, label]) => ({ label, url: webUrl(content.socials?.[key]) }))
+  const socialLinks = [['tiktok', 'TikTok'], ['youtube', 'YouTube'], ['instagram', 'Instagram'], ['x', 'X']]
+    .map(([key, label]) => ({ key, label, url: webUrl(content.socials?.[key]) }))
     .filter(item => item.url);
   document.querySelectorAll('[data-socials]').forEach(node => {
     if (!socialLinks.length) return;
     node.hidden = false;
-    node.className = 'social-links';
-    for (const { label, url } of socialLinks) {
+    node.classList.add('social-links');
+    const section = node.closest('[data-social-section]');
+    if (section) section.hidden = false;
+    for (const { key, label, url } of socialLinks) {
       const link = document.createElement('a');
-      link.textContent = label;
+      if (['tiktok', 'youtube', 'instagram'].includes(key)) {
+        const logo = document.createElement('img');
+        logo.src = `assets/icons/${key}.svg`;
+        logo.width = 24;
+        logo.height = 24;
+        logo.alt = '';
+        logo.setAttribute('aria-hidden', 'true');
+        logo.addEventListener('error', () => { link.textContent = label; }, { once: true });
+        link.append(logo);
+      } else { link.textContent = label; }
       configureLink(link, url, true);
       link.setAttribute('aria-label', label + '（新しいタブで開きます）');
+      link.title = label;
       node.append(link);
     }
   });
