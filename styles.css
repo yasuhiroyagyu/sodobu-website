@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Yuji Syuku";
-  src: url("assets/fonts/YujiSyuku-subset.woff2?v=club3") format("woff2");
+  src: url("assets/fonts/YujiSyuku-subset.woff2?v=project20261010") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -58,7 +58,7 @@ p + p { margin-top: 20px; }
 .page-tabs a { display: flex; align-items: center; justify-content: center; flex: none; padding: 13px 15px; min-height: 54px; border: 1px solid #ffffff35; border-bottom: 3px solid transparent; font-size: 12px; font-weight: 700; white-space: nowrap; transition: background .18s, border-color .18s; }
 .page-tabs a + a { border-left: 0; }
 .page-tabs a:hover { background: #ffffff14; border-bottom-color: var(--blue); }
-.page-tabs a[aria-current="page"] { color: var(--purple); background: white; border-bottom-color: var(--blue); }
+.page-tabs a[aria-current="page"], .page-tabs a[aria-current="true"] { color: var(--purple); background: white; border-bottom-color: var(--blue); }
 .page-tabs a:focus-visible { position: relative; outline-offset: -5px; }
 
 .text-link, .notice-link, .next-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px; font-weight: 700; color: var(--purple); }
@@ -217,6 +217,53 @@ body.dialog-open { overflow: hidden; }
 .project-support-link { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
 .project-support-link p:not(.eyebrow) { font-size: 14px; margin-top: 20px; }
 .project-support-link .button { flex: none; }
+
+/* Project story and links from the preparation badges. */
+.tag-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.tag-link img, .project-status-link img { width: 16px; height: 16px; flex: none; }
+.tag-link:hover { border-color: var(--purple); background: #f4eef7; }
+.project-status-link { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 14px; min-height: 44px; border: 1px solid #ffffff60; }
+.project-band .project-status-link:hover { color: white; border-color: var(--blue); background: #ffffff12; }
+.project-status-link img { filter: invert(1); }
+.project-story-heading { padding-block: 40px; border-bottom: 1px solid var(--line); }
+.project-story-heading h1 { font-size: clamp(30px, 4.3vw, 48px); line-height: 1.55; }
+.project-story-intro { font-size: 14px; color: var(--muted); margin-block: 20px; }
+.project-article-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 60px; padding-block: 48px 65px; align-items: start; }
+.project-toc { position: sticky; top: 130px; border-left: 2px solid var(--line); padding-left: 22px; }
+.project-toc > p { color: var(--purple); font-size: 12px; font-weight: 700; margin-bottom: 16px; }
+.project-toc ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.project-toc li { font-size: 12px; line-height: 1.8; }
+.project-toc a:not(.button):hover { text-decoration: underline; }
+.project-toc .button { font-size: 11px; gap: 14px; padding-inline: 14px; margin-top: 24px; width: 100%; }
+.project-article { min-width: 0; max-width: 760px; }
+.project-article section { padding-block: 36px; border-bottom: 1px solid var(--line); }
+.project-article section:first-child { padding-top: 0; }
+.project-article section:last-child { border-bottom: 0; }
+.project-article h2 { font-size: clamp(26px, 2.7vw, 32px); margin-bottom: 26px; line-height: 1.65; }
+.project-article p { font-size: 15px; line-height: 2.05; }
+.project-article .text-link { margin-top: 24px; }
+.project-schedule { margin-top: 32px; background: var(--paper); padding: 26px; }
+.project-schedule h3 { font-size: 18px; margin-bottom: 20px; }
+.project-schedule .info-table > div { grid-template-columns: minmax(0, 30fr) minmax(0, 70fr); }
+.project-costs { margin-block: 24px; padding-left: 1.4em; font-size: 14px; line-height: 1.9; }
+.project-costs li { margin-block: 10px; padding-left: 4px; }
+@media (max-width: 960px) { .project-toc { top: 150px; } }
+@media (max-width: 850px) {
+  .project-article-layout { grid-template-columns: 1fr; gap: 36px; padding-block: 32px 45px; }
+  .project-toc { position: static; border-left: 0; border-block: 1px solid var(--line); padding: 22px 0; }
+  .project-toc ol { grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+  .project-toc .button { width: auto; }
+  .project-story-heading { padding-block: 30px; }
+  .project-story-heading h1 { font-size: clamp(28px, 5vw, 40px); }
+  .project-article p { font-size: 14px; }
+  .project-story-intro { font-size: 13px; }
+  .project-schedule { padding: 20px; }
+}
+@media (max-width: 420px) {
+  .project-story-heading h1 { font-size: 28px; }
+  .project-toc li { font-size: 11px; }
+  .project-schedule .info-table > div { grid-template-columns: 1fr; gap: 6px; }
+}
 
 .support-intro { max-width: 720px; }
 .support-intro > p:not(.eyebrow) { font-size: 14px; margin-top: 24px; }

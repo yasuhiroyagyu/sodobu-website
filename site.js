@@ -48,7 +48,7 @@
 
   // Keep the current page visible in the horizontally scrolling mobile menu.
   const navigation = document.querySelector('#navigation');
-  const selected = navigation?.querySelector('[aria-current="page"]');
+  const selected = navigation?.querySelector('[aria-current]');
   if (navigation && selected) {
     requestAnimationFrame(() => {
       if (navigation.scrollWidth > navigation.clientWidth) {
