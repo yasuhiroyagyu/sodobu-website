@@ -10,14 +10,14 @@ window.CLUB_CONTENT = {
     work3: { src: '', alt: '', caption: '' }
   },
   info: { activities: '', schedule: '', visit: '' },
-  contactEmail: 's2412438@u.tsukuba.ac.jp',
+  contactEmail: 'utkbshodo@gmail.com',
   crowdfundingUrl: '',
   shopUrl: '',
   socials: {
     tiktok: 'https://www.tiktok.com/@tsukuba_shodobu',
     youtube: 'https://youtube.com/channel/UC-U7koPe01kTyQrPx79_YJA',
     instagram: 'https://instagram.com/syodou.taukuba/',
-    x: ''
+    x: 'https://x.com/tkb_shodo'
   },
   // 活動記録は確認済みの内容だけ掲載。設定方法はREADMEを参照。
   updates: [],

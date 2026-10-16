@@ -123,9 +123,9 @@
     if (section) section.hidden = false;
     for (const { key, label, url } of socialLinks) {
       const link = document.createElement('a');
-      if (['tiktok', 'youtube', 'instagram'].includes(key)) {
+      if (['tiktok', 'youtube', 'instagram', 'x'].includes(key)) {
         const logo = document.createElement('img');
-        logo.src = `assets/icons/${key}.svg`;
+        logo.src = `assets/icons/${key === 'x' ? 'twitter-x' : key}.svg`;
         logo.width = 24;
         logo.height = 24;
         logo.alt = '';
